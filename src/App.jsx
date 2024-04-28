@@ -3,7 +3,10 @@ import Login from './pages/Login'
 function App() {
   return (
     <>
-      <Login />
+      <Login
+        type={'forget'}
+        email={'asd@gmaili.com'}
+      />
     </>
   )
 }

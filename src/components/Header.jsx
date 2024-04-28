@@ -1,7 +1,7 @@
 import logo from '../assets/logo.png'
 
 const Header = () => (
-  <div className='flex items-center justify-between bg-secondary text-white px-[72px] py-5'>
+  <div className='flex items-center justify-between bg-secondary text-white px-[72px] py-5 absolute top-0 left-0 right-0'>
     <div className='grow'>
       <img
         src={logo}
