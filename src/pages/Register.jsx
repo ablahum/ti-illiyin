@@ -1,6 +1,6 @@
 import { Header, Body } from '../components'
 
-const Login = ({ type, email, isSuccessful }) => (
+const Register = ({ type, email, isSuccessful }) => (
   <>
     <Header />
 
@@ -12,4 +12,4 @@ const Login = ({ type, email, isSuccessful }) => (
   </>
 )
 
-export default Login
+export default Register

@@ -1,16 +1,17 @@
 import logo from '../assets/logo.png'
 
 const Header = () => (
-  <div className='flex items-center justify-between bg-secondary text-white px-[72px] py-5 absolute top-0 left-0 right-0'>
-    <div className='grow'>
+  <div className='flex items-center justify-between bg-secondary text-white md:px-32 xs:px-20 px-8 xs:py-4 py-2 sticky top-0'>
+    <div className=''>
       <img
         src={logo}
         alt='logo'
+        className='w-full'
       />
     </div>
 
-    <div className='flex items-center justify-between'>
-      <button className='flex items-center capitalize'>
+    <div className='flex items-center justify-between md:gap-8 xs:gap-4'>
+      <button className='hidden xs:flex items-center capitalize'>
         <svg
           className='h-8 w-8 me-1'
           width='24'
@@ -45,9 +46,9 @@ const Header = () => (
         en
       </button>
 
-      <div className='inline-block h-[20px] min-h-[1em] w-px bg-white mx-8'></div>
+      <div className='hidden xs:inline-block min-h-[1rem] w-px bg-white'></div>
 
-      <button className='bg-transparent font-semibold py-2.5 px-6 border-2 border-primary rounded-xl capitalize'>help</button>
+      <button className='bg-transparent font-semibold py-2 md:px-6 px-4 border-2 border-primary rounded-xl capitalize'>help</button>
     </div>
   </div>
 )
