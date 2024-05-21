@@ -8,6 +8,7 @@ const Register = ({ type, email, isSuccessful }) => (
       type={type}
       email={email}
       isSuccessful={isSuccessful}
+      isRegister
     />
   </>
 )

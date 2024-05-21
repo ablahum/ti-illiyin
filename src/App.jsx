@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Login from './pages/Login'
+import { Login, Register } from './pages'
 
 function App() {
   const [data, setData] = useState({
@@ -12,12 +12,19 @@ function App() {
   return (
     <>
       <Login
-        type={'email'}
+        // type={'email'}
         // type={'password'}
-        // type={'forget'}
         email={data.email}
         isSuccessful={isSuccessful}
       />
+
+      {/* <Register
+        // type={'email'}
+        // type={'contact'}
+        type={'password'}
+        email={data.email}
+        isSuccessful={isSuccessful}
+      /> */}
     </>
   )
 }
