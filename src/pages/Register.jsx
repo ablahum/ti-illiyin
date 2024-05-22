@@ -1,14 +1,14 @@
 import { Header, Body } from '../components'
 
-const Register = ({ type, email, isSuccessful }) => (
+const Register = ({ type, isSuccessful }) => (
   <>
     <Header />
 
     <Body
-      type={type}
-      email={email}
-      isSuccessful={isSuccessful}
       isRegister
+      type={type}
+      isSuccessful={isSuccessful}
+      successType={'create'}
     />
   </>
 )

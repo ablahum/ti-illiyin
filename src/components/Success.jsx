@@ -1,4 +1,4 @@
-const Success = ({ type, email }) => (
+const Success = ({ successType, email }) => (
   <div className='w-full h-full flex flex-col justify-center items-center text-center container mx-auto'>
     <div className='text-primary'>
       <svg
@@ -16,27 +16,27 @@ const Success = ({ type, email }) => (
     </div>
 
     <div className='my-10'>
-      {type === 'forget' ? (
-        <h1 className='text-4xl font-semibold'>
-          <span className='capitalize'>check </span>your inbox
-        </h1>
-      ) : (
+      {successType === 'create' ? (
         <h1 className='text-4xl font-semibold'>
           <span className='capitalize'>verify </span> your email address
         </h1>
+      ) : (
+        <h1 className='text-4xl font-semibold'>
+          <span className='capitalize'>check </span>your inbox
+        </h1>
       )}
 
-      {type === 'forget' ? (
-        <p className='mt-3'>
-          <span className='capitalize'>we </span>just emailed instructions and a reset password link to <span className='font-semibold'>{email}. </span>
-          <br className='hidden md:inline' />
-          <span className='capitalize'>it </span>might take a few minutes to arrive.
-        </p>
-      ) : (
+      {successType === 'create' ? (
         <p className='mt-3'>
           <span className='capitalize'>we </span>sent you an email with a verification link to <span className='font-semibold'>{email}. </span>
           <br className='hidden md:inline' />
           <span className='capitalize'>to </span>confirm your account please follow the link in the email we just sent.
+        </p>
+      ) : (
+        <p className='mt-3'>
+          <span className='capitalize'>we </span>just emailed instructions and a reset password link to <span className='font-semibold'>{email}. </span>
+          <br className='hidden md:inline' />
+          <span className='capitalize'>it </span>might take a few minutes to arrive.
         </p>
       )}
     </div>

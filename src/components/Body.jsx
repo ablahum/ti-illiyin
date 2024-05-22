@@ -2,21 +2,18 @@ import banner from '../assets/banner.png'
 import RegisterForm from './RegisterForm'
 import { LoginForm, Success } from './index'
 
-const Body = ({ type, email, isSuccessful, isRegister }) => (
+const Body = ({ type, successType, email, isSuccessful, isRegister }) => (
   <div className='h-screen container mx-auto'>
     {isSuccessful ? (
       <Success
-        type={type}
+        successType={successType} // create or reset
         email={email}
       />
     ) : (
       <div className='h-full flex items-center md:gap-16 xs:gap-8 gap-0 xs:absolute relative'>
         <div className='md:w-1/2 xs:w-3/4 w-full flex flex-col xs:bg-transparent bg-white p-8 xs:p-0 xs:rounded-none rounded-lg absolute xs:static top-0 left-0 right-0'>
           {isRegister ? (
-            <RegisterForm
-              type={type}
-              email={email}
-            />
+            <RegisterForm type={type} />
           ) : (
             <LoginForm
               type={type}

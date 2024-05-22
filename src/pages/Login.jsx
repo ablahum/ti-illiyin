@@ -8,6 +8,7 @@ const Login = ({ type, email, isSuccessful }) => (
       type={type}
       email={email}
       isSuccessful={isSuccessful}
+      successType={'reset'}
     />
   </>
 )

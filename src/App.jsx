@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Login, Register } from './pages'
 
 function App() {
@@ -7,12 +7,16 @@ function App() {
     email: 'asd@gmaili.com',
     password: '',
   })
-  const [isSuccessful, setIsSuccessful] = useState(true)
+  const [isSuccessful, setIsSuccessful] = useState(false)
+
+  useEffect(() => {
+    console.log('test')
+  }, [])
 
   return (
     <>
       <Login
-        // type={'email'}
+        type={'email'}
         // type={'password'}
         email={data.email}
         isSuccessful={isSuccessful}
@@ -20,8 +24,7 @@ function App() {
 
       {/* <Register
         // type={'email'}
-        // type={'contact'}
-        type={'password'}
+        type={'contact'}
         email={data.email}
         isSuccessful={isSuccessful}
       /> */}

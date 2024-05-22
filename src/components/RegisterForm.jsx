@@ -1,4 +1,4 @@
-const RegisterForm = ({ type, email }) => (
+const RegisterForm = ({ type }) => (
   <>
     <div className='mb-8'>
       {type !== 'email' && type !== 'contact' && (
@@ -211,7 +211,7 @@ const RegisterForm = ({ type, email }) => (
       </div>
 
       {type === 'contact' && (
-        <div className='bg-gray-100 p-5 flex items-center rounded-lg border-s-4 border-s-[#475BCA] mb-6'>
+        <div className='bg-gray-100 p-5 flex items-center rounded-lg border-s-8 border-s-[#475BCA] mb-6'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
