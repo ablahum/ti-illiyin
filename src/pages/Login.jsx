@@ -1,6 +1,6 @@
 import { Header, Body } from '../components'
 
-const Login = ({ type, isSuccessful, handleChange, handleClick, data, handleForget }) => (
+const Login = ({ type, isSuccessful, handleChange, handleClick, data, handleForget, maskEmail }) => (
   <>
     <Header />
 
@@ -12,6 +12,7 @@ const Login = ({ type, isSuccessful, handleChange, handleClick, data, handleForg
       handleForget={handleForget}
       isSuccessful={isSuccessful}
       successType={'reset'}
+      maskEmail={maskEmail}
     />
   </>
 )

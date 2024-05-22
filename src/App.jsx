@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Login, Register } from './pages'
 import { forgot, login } from './apis'
 
@@ -10,6 +10,18 @@ function App() {
   })
   const [type, setType] = useState('email')
   const [isSuccessful, setIsSuccessful] = useState(false)
+
+  const maskEmail = (string) => {
+    const [localPart, domain] = string.split('@')
+
+    const maskedLocalPart = localPart[0] + '*'.repeat(localPart.length - 1)
+    const [domainName, domainTLD] = domain.split('.')
+    const maskedDomainName = domainName[0] + '*'.repeat(domainName.length - 1)
+
+    const maskedEmail = `${maskedLocalPart}@${maskedDomainName}.${domainTLD}`
+
+    return maskedEmail
+  }
 
   const handleChange = (e) =>
     setData(() => ({
@@ -31,6 +43,7 @@ function App() {
           setIsSuccessful(true)
         } else {
           alert(res.data.errors)
+          setIsSuccessful(true)
         }
       } catch (err) {
         console.log(err)
@@ -69,6 +82,7 @@ function App() {
           setType('forgot')
         }}
         data={data}
+        maskEmail={maskEmail}
         isSuccessful={isSuccessful}
       />
 
