@@ -23,31 +23,35 @@ const RegisterForm = ({ type }) => (
       )}
 
       {type === 'email' ? (
-        <h1 className='text-4xl font-semibold'>
-          <span className='capitalize'>create </span>your partner account
-        </h1>
-      ) : type === 'contact' ? (
-        <h1 className='text-4xl font-semibold'>
-          <span className='capitalize'>contact </span>details
-        </h1>
-      ) : (
-        <h1 className='text-4xl font-semibold'>
-          <span className='capitalize'>create </span>password
-        </h1>
-      )}
+        <>
+          <h1 className='text-4xl font-semibold'>
+            <span className='capitalize'>create </span>your partner account
+          </h1>
 
-      {type === 'email' ? (
-        <p className='mt-3'>
-          <span className='capitalize'>create </span>an account to list and manage your property
-        </p>
+          <p className='mt-3'>
+            <span className='capitalize'>create </span>an account to list and manage your property
+          </p>
+        </>
       ) : type === 'contact' ? (
-        <p className='mt-3'>
-          <span className='capitalize'>create </span>your partner account create an account to list and manage your property
-        </p>
+        <>
+          <h1 className='text-4xl font-semibold'>
+            <span className='capitalize'>contact </span>details
+          </h1>
+
+          <p className='mt-3'>
+            <span className='capitalize'>create </span>your partner account create an account to list and manage your property
+          </p>
+        </>
       ) : (
-        <p className='mt-3'>
-          <span className='capitalize'>use </span>a minimum of 10 characters, including uppercase letters, lowercase letters and numbers.
-        </p>
+        <>
+          <h1 className='text-4xl font-semibold'>
+            <span className='capitalize'>create </span>password
+          </h1>
+
+          <p className='mt-3'>
+            <span className='capitalize'>use </span>a minimum of 10 characters, including uppercase letters, lowercase letters and numbers.
+          </p>
+        </>
       )}
     </div>
 
@@ -239,9 +243,9 @@ const RegisterForm = ({ type }) => (
       >
         continue
       </button>
-
-      <hr className='mt-6 border-b-2 bg-neutral-100 dark:bg-white/10' />
     </form>
+
+    <hr className='mt-6 border-b-2 bg-neutral-100 dark:bg-white/10' />
 
     <div className='mt-8'>
       {type === 'email' && (

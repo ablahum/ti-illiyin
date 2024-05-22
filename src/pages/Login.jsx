@@ -1,12 +1,15 @@
 import { Header, Body } from '../components'
 
-const Login = ({ type, email, isSuccessful }) => (
+const Login = ({ type, isSuccessful, handleChange, handleClick, data, handleForget }) => (
   <>
     <Header />
 
     <Body
       type={type}
-      email={email}
+      handleChange={handleChange}
+      handleClick={handleClick}
+      data={data}
+      handleForget={handleForget}
       isSuccessful={isSuccessful}
       successType={'reset'}
     />
